@@ -1,0 +1,21 @@
+@import url('https://fonts.cdnfonts.com/css/baloo-da-2-2');
+@import "/styles/mixins/colors.scss";
+@import "/styles/mixins/padding.scss";
+
+.inputText{
+    padding: 22px 17px;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px;
+    font-size: 19px;
+    font-weight: 300;
+    color: black;
+    width: 100%;
+    border-radius: 10px;
+
+    &+&{
+        margin: 20px 0px;
+    }
+    &::placeholder{
+        color: rgba(37, 37, 37, 0.429);
+    }
+}

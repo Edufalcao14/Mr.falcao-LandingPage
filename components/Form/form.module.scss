@@ -1,0 +1,110 @@
+@import url('https://fonts.cdnfonts.com/css/baloo-da-2-2');
+@import "/styles/mixins/colors.scss";
+@import "/styles/mixins/padding.scss";
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 100px ;
+    padding-top: 10px;
+}
+.h1 {
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    color: $blueLight-color;
+    font-family: 'Baloo Da 2', sans-serif;
+    padding-top: 5px;
+}
+.h1Main {
+    color: black;
+    font-size: 19px;
+    font-weight: bold;
+    color: $redLight-color;
+    font-family: 'Baloo Da 2', sans-serif;
+}
+.conainerImg{
+    display: flex;
+    padding: 35px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 30%;
+    margin: 20px;
+    background-color: $blueLight-color;
+    border-radius: 10px;
+    object-fit: contain;
+    box-shadow: rgba(0, 0.25, 0.5, 0.75) 0 8px 15px;
+  
+    
+}
+.Rdv{
+    padding: 10px;
+    font-family: 'Baloo Da 2', sans-serif;
+}
+.RdvText{
+    padding: 15px;
+    font-size: 22px;
+    font-family: 'Baloo Da 2', sans-serif;
+}
+
+.textArea{
+    padding: 22px 17px;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px;
+    font-size: 19px;
+    font-weight: 300;
+    color: black;
+    resize: none;
+    width: 100%;
+    border-radius: 10px;
+     margin: 10px 0px;
+     &+&{
+        margin: 20px 0px;
+    }
+    &::placeholder{
+        color: rgba(117, 117, 117, 0.429);
+    }
+}
+
+.submit{
+    height: 50px;
+    width: 30%;
+    margin: 20px;
+    float: right;
+    background-color: $greenButton-color;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+    font-family: 'Baloo Da 2', sans-serif;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.containerForm{
+    padding-top: 50px;
+    
+}
+.submit:disabled {
+    pointer-events: none;
+  }
+  
+  .submit:hover {
+    color: $greenButton-color;
+    background-color: white;
+    border-color: rgb(0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+    border: solid 1px;
+  }
+  
+  .submit:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }

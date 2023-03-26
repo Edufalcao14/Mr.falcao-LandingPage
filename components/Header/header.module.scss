@@ -1,0 +1,66 @@
+@import url('https://fonts.cdnfonts.com/css/baloo-da-2-2');
+@import "/styles/mixins/colors.scss";
+
+.container {
+    padding: 34px 180px 5px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -1%;
+}
+.menu{
+    
+    list-style-type: none;
+    font-size: 22px;
+    font-weight: bold;
+   
+    a+a{
+        margin-left: 38.9px;
+    }
+    color: $red-color;
+    font-weight: bold;
+    font-family: 'Baloo Da 2', sans-serif;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    @media all and (min-width: 545px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    li {
+        display: none;
+        @media all and (min-width: 545px) {
+            display: block;
+        }
+        cursor:pointer
+    }
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-family: Futura, Trebuchet MS, Arial, sans-serif;
+        font-size: 0.7em;
+        color: $red-color;
+        text-align: center;
+        padding: 14px 30px;
+        transition: background .25s, box-shadow .15s;
+        &:hover {
+            color: white;
+            background: $red-color;
+            box-shadow: 0px 4px 0px 0px $red-color;
+        }
+        @media all and (min-width: 545px) {
+            padding: 20px;
+        }
+    }
+}
+
+
+.link:hoover{
+  box-shadow: #AC2E30 0 8px 15px;
+      transform: translateY(-2px);
+      color: white;
+}
