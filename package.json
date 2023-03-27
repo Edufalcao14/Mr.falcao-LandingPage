@@ -23,6 +23,7 @@
     "react-dom": "18.2.0",
     "react-scroll": "^1.8.9",
     "sass": "^1.59.3",
-    "typescript": "5.0.2"
+    "typescript": "5.0.2",
+    "vercel": "^28.18.1"
   }
 }
