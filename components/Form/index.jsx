@@ -9,7 +9,7 @@ import axios from 'axios';
 import { useFormik } from 'formik';
 import * as Yup from "yup";
 
-const form = () => {
+const contact = () => {
 
 
     const formik = useFormik({
@@ -61,7 +61,7 @@ const form = () => {
             <div className={Style.containerForm}>
                 <h1 className={Style.h1Main} >Remplissez les détails pour prendre votre rendez-vous</h1>
 
-                <form className={Style.form} id="form" onSubmit={formik.handleSubmit} >
+                <form className={Style.form} id="forms" onSubmit={formik.handleSubmit} >
 
                     <h1 className={Style.h1}>Nom</h1>
                     <Input
@@ -152,4 +152,4 @@ const form = () => {
 
 }
 
-export default form;
+export default contact;
