@@ -41,7 +41,7 @@ const Contact = () => {
         console.log("Send Email : ", values);
         axios
             .post("/api/sendEmail", {
-                messageBody: ` Nom : ${values.name},\n Prénom : ${values.email},\n Numero De Contact : ${values.phone},\n Adresse : ${values.adress},\n  Type de Service demandé : ${values.serviceType},\n Description du Service : ${values.description}`,
+                messageBody: ` Nom : ${values.name} ,\n Prénom : ${values.firstname},\n Numero De Contact : ${values.phone},\n Adresse : ${values.adress},\n  Type de Service demandé : ${values.serviceType},\n Description du Service : ${values.description}`,
             })
             .then(() => console.log("Email Send"))
             .catch(() => console.log("Email wasn't send "));
