@@ -9,7 +9,7 @@ import axios from 'axios';
 import { useFormik } from 'formik';
 import * as Yup from "yup";
 
-const contact = () => {
+const Contact = () => {
 
 
     const formik = useFormik({
@@ -152,4 +152,4 @@ const contact = () => {
 
 }
 
-export default contact;
+export default Contact;
