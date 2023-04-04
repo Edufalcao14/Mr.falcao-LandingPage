@@ -1,6 +1,6 @@
 import Image from "next/image";
 import img from "/public/images/imgForm.svg";
-import Style from "./form.module.scss"
+import Style from "./contact.module.scss"
 import Select from "../SelectInput";
 import Input from "../inputText";
 import Button from "../Button";
@@ -72,7 +72,6 @@ const Contact = () => {
                         placeholder="Votre nom"
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
-
                         required
                     />
 
@@ -141,7 +140,6 @@ const Contact = () => {
                         placeholder="Décrivez brièvement ce dont vous avez besoin"
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
-                        
                     />
                     <Button type="submit" title="Envoyer" kind="2" />
                 </form>
