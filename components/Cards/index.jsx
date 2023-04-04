@@ -8,7 +8,7 @@ const Cards = (props) => {
     return (
         <div className={Style.containerCard} style={{backgroundImage :`url(${props.url})`}}>
              <h1 className={Style.h1Title}>{props.title}</h1>   
-             <Link activeClass="active" to={props.link} spy={true} smooth={true} offset={50} duration={500}> <Button title="Prendre Rdv" type="2" /> </Link>
+             <Link activeClass="active" to={props.link} spy={true} smooth={true} offset={50} duration={500}> <Button title="Prendre Rdv" kind="2" /> </Link>
         </div>
     )
 

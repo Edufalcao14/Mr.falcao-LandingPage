@@ -6,7 +6,7 @@ export default async function handler(req , res) {
     const {messageBody} = req.body;
 
     const client = new SMTPClient({
-        user: process.env.EMAIL,
+        user: "mrfalcaomarcio@gmail.com ",
         password: process.env.PASSWORD,
         host: 'smtp.gmail.com',
         ssl: true,
@@ -14,10 +14,10 @@ export default async function handler(req , res) {
     
     try {
         const message = await client.sendAsync({
-            text: "Teste",
+            text: messageBody,
             from: 'mrfalcaomarcio@gmail.com',
             to: 'mrfalcaomarcio@gmail.com',
-            subject: 'testing emailjs',
+            subject: 'Lead Mr.Falcao Demande De RDV',
         });
         console.log(message);
     } catch (err) {

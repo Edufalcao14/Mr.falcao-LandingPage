@@ -28,7 +28,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className={Style.action}>
-            <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500}> <Button title="Contact" type="1" /></Link>
+            <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500}> <Button title="Contact" kind="1" /></Link>
             </div>
             <div id="home">
 
