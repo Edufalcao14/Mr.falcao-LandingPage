@@ -9,7 +9,7 @@ const Welcome = () => {
     return (
         <div className={Style.container} id="home">
             <Image src={Logo} alt='Logo' />
-            <h1 className={Style.h1}>Votre maison a besoin d`&apos;`un héros? Faites appel à Mr. Falcao, le sauveur de vos projets de bricolage!</h1>
+            <h1 className={Style.h1}>Votre maison a besoin dun héros? Faites appel à Mr. Falcao, le sauveur de vos projets de bricolage!</h1>
             <Link activeClass="active" to="work" spy={true} smooth={true} offset={50} duration={500}>
                 <Button title="Découvrez nos Services" kind="2" />
             </Link>

@@ -7,9 +7,9 @@ export const FailModal = ({ closeModal }) => {
     <div className={styles.overlay} onClick={closeModal}>
       <div className={styles.modalContainer}>
         <FiXSquare />
-        <p>Votre demande de prise de rendez-vous n`&apos;`a pas pu être envoyée, veuillez réessayer.</p>
+        <p>Votre demande de prise de rendez-vous na pas pu être envoyée, veuillez réessayer.</p>
         <div className={styles.okButtonContainer} onClick={closeModal}>
-          <Button title="fechar" kind="1" />
+          <Button title="fechar" kind="1"/>
         </div>
       </div>
     </div>
