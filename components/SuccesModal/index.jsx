@@ -1,5 +1,5 @@
 import { FiCheckCircle } from "react-icons/fi";
-import Button from "../button";
+import Button from "../Button";
 import styles from "./succes.module.scss";
 
 export function SuccessModal({ closeModal }) {
