@@ -80,7 +80,16 @@ const Contact = () => {
                         pour convenir un
                         rendez-vous.
                     </p>
-                    <Image src={img} alt="logo" />
+                    <Image src={img} alt="logo" className={Style.logo} />
+                </div>
+                <div className={Style.conainerImgPhone}>
+                    <h1 className={Style.Rdv}>PRENDRE UN RENDEZ-VOUS</h1 >
+                    <p className={Style.RdvText}> Nous vous contacterons via
+                        votre numéro de téléphone
+                        pour convenir un
+                        rendez-vous.
+                    </p>
+                    <Image src={img} alt="logo" className={Style.logo} />
                 </div>
                 <div className={Style.containerForm}>
                     <h1 className={Style.h1Main} >Remplissez les détails pour prendre votre rendez-vous</h1>

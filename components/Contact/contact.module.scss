@@ -1,6 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/baloo-da-2-2');
 @import "/styles/mixins/colors.scss";
 @import "/styles/mixins/padding.scss";
+@import "/styles/mixins/responsive.scss";
 
 .container {
     display: flex;
@@ -10,8 +11,19 @@
     height: 100%;
     width: 100%;
     padding-bottom: 100px ;
-    padding-top: 10px;
+    padding-top: 60px ;
+@include Phone {
+    display: block;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  @include Tablet {
+    margin-bottom: 4rem;
+  }
 }
+
 .h1 {
     color: black;
     font-size: 15px;
@@ -19,46 +31,99 @@
     color: $blueLight-color;
     font-family: 'Baloo Da 2', sans-serif;
     padding-top: 5px;
+    @include Phone {
+        font-size: 10px;
+        
+      }
+
 }
 .h1Main {
     color: black;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: bold;
     color: $redLight-color;
     font-family: 'Baloo Da 2', sans-serif;
 }
+.logo{
+  width: 80%;
+}
 .conainerImg{
     display: flex;
-    padding: 35px;
+    padding: 25px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100%;
-    width: 30%;
+    height: 80%;
+    width: 32%;
     margin: 20px;
     background-color: $blueLight-color;
     border-radius: 10px;
     object-fit: contain;
     box-shadow: rgba(0, 0.25, 0.5, 0.75) 0 8px 15px;
   
-    
+    @include Phone {
+    display: none;
+    }
+  
+    @include Tablet {
+      display: none;
+    }
+}
+.conainerImgPhone{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5px;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+    width: 100%;
+    color: $blueLight-color;
+    object-fit: contain;
+    font-size: 12px;
+    .logo{
+       width: 30%;
+    }
+   @include Phone {
+    display: flex;
+    }
+  
+    @include Tablet {
+      margin-bottom: 4rem;
+    }
+.form{
+    @include Phone {
+       padding: 5px;
+        }
+      
+        @include Tablet {
+          margin-bottom: 4rem;
+        }
+}
 }
 .Rdv{
-    padding: 10px;
+    padding: 5px;
     font-family: 'Baloo Da 2', sans-serif;
+    @include Phone {
+        padding: 5px;
+        color: $redLight-color;
+        }
 }
 .RdvText{
-    padding: 15px;
-    font-size: 22px;
+    font-size: 18px;
     font-family: 'Baloo Da 2', sans-serif;
+    @include Phone {
+        padding: 5px;
+        font-size: 15px;
+    }
 }
 
 .textArea{
-    padding: 22px 17px;
+    padding: 20px 15px;
     background-color: rgb(255, 255, 255);
     border: solid 1px;
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 300;
     color: black;
     resize: none;
@@ -71,40 +136,9 @@
     &::placeholder{
         color: rgba(117, 117, 117, 0.429);
     }
+    @include Phone {
+        padding: 10px 10px;
+        font-size: 13px;
+        width: 80%;
+      }
 }
-
-.submit{
-    height: 50px;
-    width: 30%;
-    margin: 20px;
-    float: right;
-    background-color: $greenButton-color;
-    border: none;
-    cursor: pointer;
-    font-size: large;
-    font-family: 'Baloo Da 2', sans-serif;
-    font-weight: bold;
-    border-radius: 4px;
-}
-
-.containerForm{
-    padding-top: 50px;
-    
-}
-.submit:disabled {
-    pointer-events: none;
-  }
-  
-  .submit:hover {
-    color: $greenButton-color;
-    background-color: white;
-    border-color: rgb(0, 0, 0);
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-    border: solid 1px;
-  }
-  
-  .submit:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }

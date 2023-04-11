@@ -1,5 +1,6 @@
+@import "/styles/mixins/responsive.scss";
 .select{
-    padding: 22px 17px;
+    padding: 10px 10px;
     background-color: white;
     border: solid 1px;
     font-size: 19px;
@@ -12,4 +13,9 @@
     &::placeholder{
         color: rgba(37, 37, 37, 0.429);
     }
+    @include Phone {
+        padding: 10px 10px;
+        font-size: 13px;
+        width: 80%;
+      }
 }

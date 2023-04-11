@@ -1,5 +1,6 @@
 @import "/styles/mixins/colors.scss";
 @import url('https://fonts.cdnfonts.com/css/baloo-da-2-2');
+@import "/styles/mixins/responsive.scss";
 
 .button {
     appearance: none;
@@ -27,6 +28,10 @@
     touch-action: manipulation;
     width: 100%;
     will-change: transform;
+    @include Phone {
+      font-size: 12px;
+      padding: 12px 20px;
+    }
   }
   
   .button:disabled {
@@ -74,6 +79,13 @@
   touch-action: manipulation;
   width: 100%;
   will-change: transform;
+  @include Phone {
+    font-size: 16px;
+    padding: 12px 20px;
+    min-height: 20px;
+    width: 80%;
+  }
+  
 }
 
 .button2:disabled {

@@ -1,66 +1,150 @@
 @import url('https://fonts.cdnfonts.com/css/baloo-da-2-2');
 @import "/styles/mixins/colors.scss";
+@import "/styles/mixins/responsive.scss";
 
 .container {
-    padding: 34px 180px 5px;
+    padding: 34px 100px 5px;
     width: 100%;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: -1%;
+    @include Phone{
+        padding: 15px 60px 5px;
+    }
 }
-.menu{
-    
+
+.menu {
+    padding-left: 10%;
     list-style-type: none;
-    font-size: 22px;
     font-weight: bold;
-   
-    a+a{
+
+    a+a {
         margin-left: 38.9px;
     }
+
     color: $red-color;
     font-weight: bold;
-    font-family: 'Baloo Da 2', sans-serif;
+    font-family: 'Baloo Da 2',
+    sans-serif;
     list-style: none;
     display: flex;
     flex-direction: column;
+
     @media all and (min-width: 545px) {
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
+
     li {
         display: none;
         @media all and (min-width: 545px) {
             display: block;
         }
+
         cursor:pointer
     }
+
     a {
         text-decoration: none;
         text-transform: uppercase;
-        letter-spacing: 5px;
+        letter-spacing: 3px;
         font-family: Futura, Trebuchet MS, Arial, sans-serif;
-        font-size: 0.7em;
+        font-size: 1em;
         color: $red-color;
         text-align: center;
         padding: 14px 30px;
         transition: background .25s, box-shadow .15s;
+
         &:hover {
             color: white;
             background: $red-color;
             box-shadow: 0px 4px 0px 0px $red-color;
         }
+
         @media all and (min-width: 545px) {
             padding: 20px;
         }
     }
+    @include Phone {
+        display: none;
+    }
+
 }
 
+.action {
+    @include Phone {
+        display: none;
+    }
+}
 
-.link:hoover{
-  box-shadow: #AC2E30 0 8px 15px;
-      transform: translateY(-2px);
-      color: white;
+.link:hoover {
+    box-shadow: #AC2E30 0 8px 15px;
+    transform: translateY(-2px);
+    color: white;
+}
+.logoImg{
+    width: 80%;
+    @include Phone {
+    }
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  .dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+  }
+  
+  .dropdownContent .links {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    color: $red-color;
+    font-weight: bold;
+    font-family: 'Baloo Da 2',sans-serif;
+    text-transform: uppercase;
+  }
+  
+  .dropdownContent .links:hover {
+    background-color: $redLight-color;
+    color: white;
+  }
+  
+  .dropdown:hover .dropdownContent {
+    display: block;
+  }
+  .menuPhone{
+    display: none;
+    @include Phone {
+        display: flex;
+    }
+  }
+  .link:hoover {
+    box-shadow: #AC2E30 0 8px 15px;
+    transform: translateY(-2px);
+    color: white;
 }
