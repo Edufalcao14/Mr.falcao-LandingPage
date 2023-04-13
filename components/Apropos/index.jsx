@@ -8,7 +8,7 @@ const Apropos = () => {
     return (
         <div className={Style.container} id="about">
              <h1 className={Style.h1Apropos}>À PROPOS DE NOUS </h1>
-            <div className={Style.imgDIv}><Image src={picsContainer} alt='Work Pictures' /></div>
+            <Image className={Style.picture} src={picsContainer} alt='Work Pictures' />
         </div>
         
     )

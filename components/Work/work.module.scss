@@ -1,6 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/baloo-da-2-2');
 @import "/styles/mixins/colors.scss";
 @import "/styles/mixins/padding.scss";
+@import "/styles/mixins/responsive.scss";
 
 .container {
     @include Padding;
@@ -19,7 +20,14 @@
     background-size: cover;
     justify-content: space-around;
     padding-top: 100px;
+
+    @include Phone {
+        display: flex;
+   
+        
+    }
 }
+
 .containerCards {
     display: flex;
     padding-left: 50px;
@@ -27,4 +35,15 @@
     padding-top: 50px;
     padding-bottom: 100px;
     justify-content: space-around;
+
+    @include Phone {
+        display: flex;
+        flex-direction: column;
+  
+    }
+}
+.card{
+    @include Phone {
+       padding-bottom: 10%;
+    }
 }

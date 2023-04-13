@@ -1,6 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/baloo-da-2-2');
 @import "/styles/mixins/colors.scss";
 @import "/styles/mixins/padding.scss";
+@import "/styles/mixins/responsive.scss";
 
 .container {
     display: flex;
@@ -14,8 +15,23 @@
     font-size: 24px;
     line-height: 81px;
     justify-content: first baseline;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    @include Phone {
+        padding-bottom: 5px; 
+    }
 }
 .h1Apropos {
-    padding: 50PX;
+    @include Phone {
+        font-size: 30px;
+        padding: 10px;
+    }
+}
+
+.picture{
+    width: 70%;
+    @include Phone {
+            width: 100%;
+            height: 50%;
+    }
 }
