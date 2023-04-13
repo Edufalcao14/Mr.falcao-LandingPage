@@ -23,6 +23,9 @@
             height: 70%;
         }
     }
+    @include BigScreen{
+        padding: 200px;
+    }
 }
 .h1 {
     padding: 35px;
